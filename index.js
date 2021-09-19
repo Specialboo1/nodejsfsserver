@@ -32,7 +32,7 @@ fs.writeFile(`./${req.body.message}.txt`, `${new Date()}`, function (err)
     res.send("created")
 })    
 })
-app.listen(3000, function()
+app.listen(process.env.PORT || 3000, function()
 {
     console.log("I am listening");
 })
